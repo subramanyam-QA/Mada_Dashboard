@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>TestLogin.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+TestLogin.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">TestRunner</span><span class="s0">;</span>
+
+
+<span class="s0">import </span><span class="s1">ChromeDriver.DriverFactory</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">Credentials.BaseClass</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">HomePage.HomePageSteps</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">PayerSummeryPage.PayerSteps</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">net.serenitybdd.junit.runners.SerenityRunner</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">net.thucydides.core.annotations.Steps</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.junit.Assert</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.junit.Test</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.junit.runner.RunWith</span><span class="s0">;</span>
+
+<span class="s0">import static </span><span class="s1">Credentials.BaseClass.BaseUrl</span><span class="s0">;</span>
+
+<span class="s1">@RunWith(SerenityRunner.</span><span class="s0">class</span><span class="s1">)</span>
+<span class="s0">public class </span><span class="s1">TestLogin </span><span class="s0">extends </span><span class="s1">DriverFactory {</span>
+
+    <span class="s1">BaseClass baseClass</span><span class="s0">;</span>
+    <span class="s1">@Steps</span>
+    <span class="s1">HomePageSteps homePage</span><span class="s0">;</span>
+
+    <span class="s1">@Steps</span>
+    <span class="s1">PayerSteps payerSteps</span><span class="s0">;</span>
+
+    <span class="s1">@Test</span>
+    <span class="s0">public void </span><span class="s1">userLoginHomePage() {</span>
+        <span class="s1">driver.manage().window().maximize()</span><span class="s0">;</span>
+        <span class="s1">driver.get(BaseUrl)</span><span class="s0">;</span>
+
+
+        <span class="s1">homePage.enterUserName()</span><span class="s0">;</span>
+        <span class="s1">homePage.enterPassword()</span><span class="s0">;</span>
+        <span class="s1">homePage.clickOnLoginButton()</span><span class="s0">;</span>
+        <span class="s1">String expectTitle = driver.getTitle()</span><span class="s0">;</span>
+        <span class="s1">System.out.println(expectTitle)</span><span class="s0">;</span>
+        <span class="s1">String actualTitle = </span><span class="s2">&quot;MADA Dashboard&quot;</span><span class="s0">;</span>
+        <span class="s1">Assert.assertEquals(expectTitle</span><span class="s0">, </span><span class="s1">actualTitle)</span><span class="s0">;</span>
+
+<span class="s3">//        payerSteps.clickPayerSummery();</span>
+<span class="s3">//        payerSteps.clickOnActiveLink();</span>
+
+       <span class="s3">// System.out.println(expectStatus);</span>
+
+
+    <span class="s1">}</span>
+
+
+    <span class="s0">private class </span><span class="s1">PayerSummery {</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
