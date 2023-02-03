@@ -14,7 +14,7 @@ public class DashboardHomePage extends PageObject {
 
         $("#user_password").sendKeys(password);
     }
-//
+
     public void clickOnLoginButton() {
         $(".submit").click();
 
