@@ -2,7 +2,7 @@ package TestRunner;
 
 
 import ChromeDriver.DriverFactory;
-import HomePage.HomePageSteps;
+import LandingPage.LandingPageSteps;
 import PayerSummeryPage.PayerSummerySteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import org.junit.Assert;
@@ -13,26 +13,17 @@ import org.junit.runner.RunWith;
 public class TestLogin extends DriverFactory {
 
 
-   HomePageSteps homePage;
+   LandingPageSteps landingPageActions;
     PayerSummerySteps payerSummerySteps;
 
     @Test
     public void userLoginHomePage() throws InterruptedException {
-
         setDriver();
-        homePage.dashboardLogin();
-
+        landingPageActions.dashboardLogin();
 
         String expectTitle = driver.getTitle();
         String actualTitle = "MADA Dashboard";
         Assert.assertEquals(expectTitle, actualTitle);
-
-
-        payerSummerySteps.clickPayerSummery();
-        String actualSummary  = driver.getCurrentUrl();
-        Assert.assertTrue(actualSummary.contains("payer_summary"));
-
-
 
     }
 

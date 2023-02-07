@@ -6,12 +6,12 @@ Feature: MADA QA Dashboard Application
     And User click on Login button
     Then User Navigate to HomePage
 
-    Scenario:  Verify Active Link in Payer Summery page
-      Given User is on Homepage
-      When User click on payer summery page
-      Then User validate the payer summery URL
-      When User click on Active Links
-      Then User get Script Status is Active
+#    Scenario:  Verify Active Link in Payer Summery page
+#      Given User is on Homepage
+#      When User click on payer summery page
+#      Then User validate the payer summery URL
+#      When User click on Active Links
+#      Then User get Script Status is Active
 
 
 

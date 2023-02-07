@@ -5,12 +5,9 @@ import net.serenitybdd.core.pages.PageObject;
 
 public class PayerSummery extends PageObject {
 
-
-    public void clickOnPayer() {
-
-        $("//a[text()='Payer Summary']").click();
+    public void clickOnPayer(String businessName) {
+        $("//a[text()='"+businessName+"']").click();
     }
-
 
 
 }
