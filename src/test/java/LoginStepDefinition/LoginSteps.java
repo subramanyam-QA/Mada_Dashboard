@@ -12,12 +12,13 @@ public class LoginSteps extends DriverFactory {
     LandingPageActions landingPageActions;
     @Given("User is on Dashboard Lading page")
     public void user_is_on_dashboard_lading_page() {
-        landingPageActions.open();
+        setDriver();
+        landingPageActions.open("http://mada-dashboard-qa.decisionresourcesgroup.com/users/sign_in");
 
     }
     @When("User enter the Valid User name")
     public void user_enter_the_valid_user_name() {
-     //   landingPageActions.enterUserName("msubramanyam");
+        landingPageActions.enterUserName("msubramanyam");
 
     }
     @When("User enter the  valid password")

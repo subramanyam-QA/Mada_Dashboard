@@ -4,7 +4,7 @@ import net.serenitybdd.core.pages.PageObject;
 
 public class LandingPageSteps extends PageObject {
     LandingPageActions landingPageActions;
-    LandingPageElements landingPageElements;
+    //LandingPageElements landingPageElements;
 
 
 
