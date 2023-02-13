@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(SerenityRunner.class)
 @CucumberOptions(features = "src/main/resources/Features",  //run feature file
-glue = {"LoginStepDefinition"},                             //run stepDefinition
+//glue = {"LoginStepDefinition"},                             //run stepDefinition
 plugin={"pretty","html:target/Reports/report.html",
         "json:target/Reports/report.json",
         "junit:target/Reports/report.junit"}

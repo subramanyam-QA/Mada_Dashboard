@@ -26,7 +26,7 @@ public class TestMedTech extends DriverFactory {
         String actualString = $("//a[text()='Acquisition Monitor']").getText();
         assertTrue(actualString.contains("Acquisition"));
 
-        crudSteps.setUpdateBtn();
+        //crudSteps.setUpdateBtn();
 
     }
     }

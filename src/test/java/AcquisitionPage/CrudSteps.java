@@ -1,13 +1,18 @@
 package AcquisitionPage;
 
-import net.serenitybdd.core.pages.PageObject;
 
-import static java.time.temporal.ChronoUnit.SECONDS;
+import net.serenitybdd.core.pages.PageObject;
 
 public class CrudSteps extends PageObject {
     CrudActions crudActions;
-    public void setUpdateBtn(){
+    public void setUpdateBtn() throws InterruptedException {
+       crudActions.clickOnUpdateBtn();
 
-        crudActions.clickOnUpdateBtn();
     }
+//    public void setCreateBtn(){
+//
+//    }
+//    public void setDeleteBtn(){
+//
+//    }
 }

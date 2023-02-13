@@ -6,7 +6,6 @@ import AcquisitionPage.CrudSteps;
 import ChromeDriver.DriverFactory;
 import LandingPage.LandingPageSteps;
 import PayerSummeryPage.PayerSummerySteps;
-import javafx.scene.control.Alert;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import org.junit.Assert;
 import org.junit.Test;
@@ -15,7 +14,7 @@ import org.junit.runner.RunWith;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(SerenityRunner.class)
-public class TestLogin extends DriverFactory {
+public class TestLogin extends DriverFactory{
 
 
    LandingPageSteps landingPageActions;
@@ -34,7 +33,7 @@ public class TestLogin extends DriverFactory {
 
     }
     @Test
-    public void clickAcqisition(){
+    public void clickAcqisition() throws InterruptedException {
         setDriver();
         landingPageActions.dashboardLogin();
         acquisitionSteps.clickAcqMonitor();
